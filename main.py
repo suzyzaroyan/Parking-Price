@@ -53,7 +53,6 @@ timeIntervals = [
 }
 ]
 
-answer = 0
 rate = 100
 
 answer = input("choose your time interval of parking: ")
