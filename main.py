@@ -1,20 +1,62 @@
-# User Story 2: After getting desired duration of parking entered by the user, the rate for the parking is calculated below using user's input given above.
+timeIntervals = [
+{
+  "name" : "less than 15 min",
+  "value": 0
+},
+{
+  "name" : "1 hour",
+  "value": 1
+},
+{
+  "name" : "1-2 hours",
+  "value": 2
+},
+{
+  "name" : "2-3 hours",
+  "value": 3
+},
+{
+  "name" : "3-4 hours",
+  "value": 4
+},
+{
+  "name" : "4-5 hours",
+  "value": 5
+},
+{ 
+  "name" : "5-6 hours",
+  "value": 6
+},
+{
+  "name" : "6-7 hours",
+  "value": 7
+},
+{
+  "name" : "7-8 hours",
+  "value": 8
+},
+{
+  "name" : "8-9 hours",
+  "value": 9
+},
+{
+  "name" : "9-10 hours",
+  "value": 10
+},
+{
+  "name" : "10-12 hours",
+  "value": 12
+},
+{
+  "name" : "12-24 hours",
+  "value": 20
+}
+]
 
+answer = 0
+rate = 100
 
-rate=100 # rate is 100 drams per hour
-if answer == time[0]:
-  print('Rate for parking is ', rate * 0, ' drams')
-elif answer == time[1]:
-  print('Rate for parking is ', rate * 1, ' drams')
-elif answer == time[2]:
-  print('Rate for parking is ', rate * 2, ' drams')
-elif answer == time[3]:
-  print('Rate for parking is ', rate * 3, ' drams')
-elif answer == time[4]:
-  print('Rate for parking is ', rate * 4, ' drams')
-elif answer == time[5]:
-  print('Rate for parking is ', rate * 5, ' drams')
-elif answer == time[6]:
-  print('Rate for parking is ', rate * 6, ' drams')
-else:
-  print('Something is wrong')
+answer = input("choose your time interval of parking: ")
+for timeInterval in timeIntervals:
+  if answer == timeInterval['name']:
+    print("your parking rate is ", timeInterval['value'] * rate)
